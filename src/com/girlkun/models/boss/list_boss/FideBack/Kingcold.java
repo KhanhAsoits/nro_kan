@@ -28,6 +28,8 @@ public class Kingcold extends Boss {
 
       @Override
     public void reward(Player plKill) {
+          super.getVipPoint(plKill);
+
         int[] itemDos = new int[]{555, 557, 559, 556, 558, 560, 562, 564, 566, 563, 565, 567};
         int[] NRs = new int[]{15, 16};
         int randomDo = new Random().nextInt(itemDos.length);

@@ -17,6 +17,8 @@ public class Vados extends Boss {
 
     @Override
     public void reward(Player plKill) {
+        super.getVipPoint(plKill);
+
         int[] manhthuong = new int[]{1142, 1142};
         int[] manhhiem = new int[]{1142, 1067, 1142};
 

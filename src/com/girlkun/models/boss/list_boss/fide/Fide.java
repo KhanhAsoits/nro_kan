@@ -18,6 +18,8 @@ public class Fide extends Boss {
     }
     @Override
     public void reward(Player plKill) {
+        super.getVipPoint(plKill);
+
         if (Util.isTrue(15, 100)) {
             ItemMap it = new ItemMap(this.zone, 17, 1, this.location.x, this.zone.map.yPhysicInTop(this.location.x,
                     this.location.y - 24), plKill.id);

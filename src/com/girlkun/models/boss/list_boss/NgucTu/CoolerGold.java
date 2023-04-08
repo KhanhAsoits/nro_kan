@@ -30,6 +30,7 @@ public class CoolerGold extends Boss {
 
     @Override
     public void reward(Player plKill) {
+        super.getVipPoint(plKill);
         int[] itemDos = new int[]{1142,1142,1117,1142,1142};
         int[] NRs = new int[]{17,16};
         int randomDo = new Random().nextInt(itemDos.length);

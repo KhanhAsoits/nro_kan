@@ -42,11 +42,13 @@ public class Broly extends Boss {
     public void reward(Player plKill) {
         if (this.currentLevel > 0) {
             // chi tinh tu broly 2
+            // huy die
+            super.getVipPoint(plKill);
             int[] itemDos = new int[]{555, 556, 557, 558, 559, 560, 561, 562};
             int[] NRs = new int[]{17, 18};
             int randomDo = new Random().nextInt(itemDos.length);
             int randomNR = new Random().nextInt(NRs.length);
-            if (Util.isTrue(100, 100)) {
+            if (Util.isTrue(5, 100)) {
                 if (CombineMiddleware.gI().canDrop1s(this.zone, this.location.x, this.location.y, plKill.id)) {
                     return;
                 }

@@ -26,6 +26,8 @@ public class XenBoHung extends Boss {
 
     @Override
     public void reward(Player plKill) {
+        super.getVipPoint(plKill);
+
         if(Util.isTrue(50,100)){
         ItemMap it = new ItemMap(this.zone, 1142, 1, this.location.x, this.location.y, plKill.id);
         Service.gI().dropItemMap(this.zone, it);

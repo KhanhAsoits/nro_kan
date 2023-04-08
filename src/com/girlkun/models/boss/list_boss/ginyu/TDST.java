@@ -28,6 +28,8 @@ public class TDST extends Boss {
 
     @Override
     public void reward(Player plKill) {
+        super.getVipPoint(plKill);
+
         super.reward(plKill);
         if (this.currentLevel == 1) {
             return;

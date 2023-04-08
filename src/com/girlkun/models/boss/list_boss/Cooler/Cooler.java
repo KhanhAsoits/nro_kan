@@ -20,6 +20,7 @@ public class Cooler extends Boss {
 
     @Override
     public void reward(Player plKill) {
+        super.getVipPoint(plKill);
         int[] itemDos = new int[]{233, 237, 241, 245, 249, 253, 257, 261, 265, 269, 273, 277, 281};
         int itemTL = (int) new Random().nextInt(Manager.itemIds_TL.length - 1);
         int[] itemtime = new int[]{381, 382, 383, 384, 385};

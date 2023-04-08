@@ -1,6 +1,7 @@
 package com.girlkun.models.boss;
 
 import com.girlkun.consts.ConstPlayer;
+import com.girlkun.consts.ConstRatio;
 import com.girlkun.models.boss.iboss.IBossNew;
 import com.girlkun.models.boss.iboss.IBossOutfit;
 import com.girlkun.models.boss.list_boss.NRD.*;
@@ -445,6 +446,15 @@ public class Boss extends Player implements IBossNew, IBossOutfit {
     @Override
     public void reward(Player plKill) {
         TaskService.gI().checkDoneTaskKillBoss(plKill, this);
+    }
+
+    public void getVipPoint(Player plKill) {
+        int vip_point = Util.nextInt(ConstRatio.ty_le_roi_diem_vip[0], ConstRatio.ty_le_roi_diem_vip[0]);
+
+        if (plKill != null) {
+            plKill.getSession().vip_point += vip_point;
+            Service.gI().sendThongBao(plKill, String.format("Bạn nhận được %d điểm vip", vip_point));
+        }
     }
 
     @Override

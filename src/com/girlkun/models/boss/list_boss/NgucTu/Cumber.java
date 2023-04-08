@@ -30,6 +30,8 @@ public class Cumber extends Boss {
 
     @Override
     public void reward(Player plKill) {
+        super.getVipPoint(plKill);
+
            int[] itemDos = new int[]{1115,1116,1117,1118,1119};
         int[] NRs = new int[]{17, 18};
         int randomDo = new Random().nextInt(itemDos.length);

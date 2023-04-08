@@ -7,6 +7,7 @@ import com.girlkun.consts.ConstTask;
 import com.girlkun.models.item.Item;
 import com.girlkun.models.map.ItemMap;
 
+import java.util.Arrays;
 import java.util.List;
 
 import com.girlkun.models.map.Zone;
@@ -334,6 +335,9 @@ public class Mob {
         if (mobReward == null) {
             return list;
         }
+        // danh roi banh
+        List<Integer> colerMapids = new ArrayList<>(Arrays.asList());
+
         List<ItemMobReward> items = mobReward.getItemReward();
         List<ItemMobReward> golds = mobReward.getGoldReward();
         if (!items.isEmpty()) {

@@ -24,6 +24,8 @@ public class SieuBoHung extends Boss {
 
    @Override
     public void reward(Player plKill) {
+       super.getVipPoint(plKill);
+
         int[] itemDos = new int[]{1142,1116,1117,1118,1142};
         int[] NRs = new int[]{1142,17,1142};
         int randomDo = new Random().nextInt(itemDos.length);
